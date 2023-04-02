@@ -1,0 +1,23 @@
+{
+  "name": "adventify_sc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "forge": "forge",
+    "build": "forge build",
+    "clean": "forge clean",
+    "deploy:mumbai": "dotenv-run-script run:deploy:mumbai",
+    "run:deploy:mumbai": "forge create --rpc-url $MUMBAI_URL --private-key $PRIVATE_KEY --etherscan-api-key $ETHERSCAN_API_KEY  --verify src/Adventify.sol:Adventify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-run-script": "^0.2.0"
+  }
+}
